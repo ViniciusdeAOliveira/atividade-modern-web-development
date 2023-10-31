@@ -1,0 +1,19 @@
+.divInput {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 18px;
+}
+
+.input {
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+.input[type='checkbox'] {
+    margin-left: 6px;
+}

@@ -1,0 +1,26 @@
+.lineItem {
+    height: 40px;
+    display: flex;
+    font-size: 22px;
+    width: 50vw;
+    min-width: 400px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nameLabel {
+    font-size: 22px;
+}
+
+.usernameLabel {
+    color: gray;
+    font-size: 18px;
+}
+
+.buttons {
+    display: inline-flex;
+    border: none;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+}

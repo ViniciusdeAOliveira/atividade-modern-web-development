@@ -1,0 +1,24 @@
+{
+    "name": "aula_web_full06",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "next dev",
+        "build": "next build",
+        "prod": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@phosphor-icons/react": "^2.0.13",
+        "next": "latest",
+        "phosphor-icons": "^1.4.2",
+        "react": "latest",
+        "react-dom": "latest"
+    },
+    "devDependencies": {
+        "@types/node": "latest",
+        "@types/react": "latest",
+        "@types/react-dom": "latest",
+        "typescript": "latest"
+    }
+}
