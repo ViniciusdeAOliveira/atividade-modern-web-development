@@ -2,6 +2,6 @@
 
 Grupo:
 
-Thiago Neves Pedroso - RA 2301472
-Vinicius de Almeida Oliveira - RA 2301597
+Thiago Neves Pedroso - RA 2301472 </br>
+Vinicius de Almeida Oliveira - RA 2301597 </br>
 Wagner Felipe Santana da Silva - RA 1801971
