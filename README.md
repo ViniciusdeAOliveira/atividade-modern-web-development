@@ -1,1 +1,7 @@
-# auth_web_full06
+# Atividade final Modern Web Development
+
+Grupo:
+
+Thiago Neves Pedroso - RA 2301472
+Vinicius de Almeida Oliveira - RA 2301597
+Wagner Felipe Santana da Silva - RA 1801971
