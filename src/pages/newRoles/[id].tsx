@@ -67,17 +67,17 @@ export default function RolePage() {
       // editar um papel
       if (id > 0) {
         let body = { name, description } as Roles;
-        console.log(id, body);
+        id, body;
         await rolesService.update(id.toString(), body);
         router.replace("/roles");
       } else {
         let body = { name, description } as Roles;
-        console.log(body);
+        body;
         await rolesService.create(body);
         router.replace("/roles");
       }
     } catch (error: any) {
-      console.log("erro");
+      ("erro");
     }
   }
 

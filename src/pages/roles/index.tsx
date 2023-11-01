@@ -33,7 +33,7 @@ const rolesPage = () => {
       .getList()
       .then((Rolelist) => {
         setRoles(Rolelist);
-        console.log(Rolelist);
+        Rolelist;
       })
       .catch(treat);
   }

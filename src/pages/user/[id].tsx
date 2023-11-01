@@ -23,6 +23,7 @@ export default function UserPage() {
   const [password, setPassword] = React.useState("");
   const [passConfirm, setPassConfirm] = React.useState("");
   const [roles, setRoles] = React.useState<Roles[]>([]);
+  const [userRoles, setUserRoles] = React.useState<string[]>([]);
 
   React.useEffect(() => {
     const user = authService.getLoggedUser();
@@ -43,6 +44,7 @@ export default function UserPage() {
         .then((user) => {
           setName(user.name);
           setUsername(user.username);
+          setUserRoles(user.roles!);
         })
         .catch(treat);
     }
@@ -61,7 +63,6 @@ export default function UserPage() {
       .getList()
       .then((Rolelist) => {
         setRoles(Rolelist);
-        console.log(Rolelist);
       })
       .catch(treat);
   }
@@ -89,13 +90,20 @@ export default function UserPage() {
 
     try {
       if (id > 0) {
+        // let roleList: any = userRoles;
+
         // editar um usuário
         let body = { name, username } as User;
 
         if (password && password.trim() !== "") {
           body = { ...body, password };
         }
-        await userService.update(id, body);
+        await userService.update(id, {
+          name: name,
+          username: username,
+          password: password,
+          roles: userRoles,
+        });
         router.back();
       } else {
         // Criar um novo
@@ -157,9 +165,28 @@ export default function UserPage() {
             onChange={(event) => setPassConfirm(event.target.value)}
           />
           <p className={styles.roleTitle}>Papéis</p>
-          {roles.map((role) => (
-            <MyInput label={role.name} type="checkbox" key={role.id} />
-          ))}
+          {roles.map((role) => {
+            if (userRoles.length != 0) {
+              return (
+                <MyInput
+                  value={userRoles}
+                  label={role.name}
+                  type="checkbox"
+                  key={role.id}
+                  checked={userRoles.includes(role.name)}
+                />
+              );
+            } else {
+              return (
+                <MyInput
+                  value={userRoles}
+                  label={role.name}
+                  type="checkbox"
+                  key={role.id}
+                />
+              );
+            }
+          })}
         </div>
 
         <button className={styles.saveButton} onClick={save}>
